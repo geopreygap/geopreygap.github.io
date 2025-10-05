@@ -1,102 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery</title>
 
-<style>
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; 
-}
-   
-    div.scroll-container {
-
-        background-color: rgba(255, 235, 59, 0.3);
-        overflow: auto;
-        white-space:nowrap;
-        padding:10px;
-        width: fit-content;        
-        margin: 0 auto; 
-        justify-content: center;
-        display: flex;
-
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
     }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #000;
+      font-family: sans-serif;
+    }
+
     h1 {
       font-size: 3.5rem;
       font-weight: 700;
       letter-spacing: 3px;
       color: #ffde59;
       text-align: center;
-        
-      }
-nav {
-      text-align: center;
-      margin-top: 30px;
+      margin-top: 80px;
     }
 
-    nav a {
-      text-decoration: none;
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+
+    .navbar a {
       color: #ffeb3b;
+      text-decoration: none;
       font-weight: 600;
       font-size: 1.2rem;
-      margin: 0 15px;
       padding: 8px 15px;
       border-radius: 30px;
-      background: rgba(255, 255, 255, 0.15);
-      box-shadow: 0 0 8px #fffbe6;
+      background: rgba(255, 255, 255, 0.1);
       transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
-      display: inline-block;
     }
 
-    nav a:hover {
+    .navbar a:hover {
       background: #ffeb3b;
       color: #000;
       transform: scale(1.1);
       box-shadow: 0 0 20px #fff700;
     }
-   .video-controls {
+
+    #background-video {
       position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 10;
-      background: rgba(0,0,0,0.5);
-      border-radius: 8px;
-      padding: 8px 12px;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .scroll-container {
+      background-color: rgba(255, 235, 59, 0.3);
+      overflow-x: auto;
       display: flex;
       gap: 10px;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
-    .video-controls button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      width: 32px;
-      height: 32px;
-      fill: #ffeb3b;
-      transition: fill 0.3s ease;
-      align-content: center;
+    .scroll-container img {
+      width: 280px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5); 
     }
 
-    .video-controls button:hover {
-      fill: #fdd835;
-    }
-    #background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;  
-  height: 100vh;  
-  object-fit: cover; 
-  z-index: -1;    
+    .scroll-container img {
+  width: 280px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.scroll-container img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+  z-index: 2;
+}
+
+    
+   .video-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px auto;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  width: fit-content;
+  z-index: 10;
+}
+
+.video-controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  fill: #ffeb3b;
+  transition: fill 0.3s ease;
+}
+
+.video-controls button:hover {
+  fill: #fdd835;
 }
 
 
@@ -108,82 +141,78 @@ nav {
       font-style: italic;
       font-weight: 500;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-      
     }
 
   </style>
-
 </head>
 <body>
 
-  
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="gapasin_resume.html">My Resume</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
 
+  <h1>GALLERY</h1>
+  <hr>
 
-<h1>GALLERY</h1>
-<HR>
- <!-- Video Background -->
   <video id="background-video" autoplay muted loop>
     <source src="VIDEO/30.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
   </video>
 
-  
-    
-
-<div class="scroll-container">
-<marquee>
-     <img src = "IMG/16.jpg" width="280" height="250" >
-    <img src = "IMG/17.jpg" width="280" height="250">
-     <img src = "IMG/18.jpg" width="280" height="250">
-      <img src = "IMG/19.jpg" width="280" height="250">
-       <img src = "IMG/20.jpg" width="280" height="250">
-        <img src = "IMG/21.jpg" width="280" height="250">
-         <img src = "IMG/22.jpg" width="280" height="250">
-          <img src = "IMG/23.png" width="280" height="250">
-           <img src = "IMG/24.jpg" width="280" height="250">
-            <img src = "IMG/25.jpg" width="280" height="250">
-               <img src = "IMG/26.jpg" width="280" height="250">
-                <img src = "IMG/29.jpg" width="280" height="250">
-                 <img src = "IMG/28.jpg" width="280" height="250">
-    <img src = "IMG/2.jpeg" width="280" height="250">
-    <img src = "IMG/3.jpeg" width="280" height="250">
-    <img src = "IMG/4.jpeg" width="280" height="250">
-    <img src = "IMG/15.jpg" width="280" height="250">
-      <img src = "IMG/1.jpeg" width="280" height="250" >
-             <img src = "IMG/6.jpeg" width="280" height="250">
-            
-                 <img src = "IMG/5.jpeg" width="280" height="250">
-
-</marquee>   
-
-
-</div>
-<hr>
-
-  <div class="video-controls">
-    <button id="play-btn" aria-label="Play video" title="Play">
-      <svg viewBox="0 0 24 24" >
-        <path d="M8 5v14l11-7z"/>
-      </svg>
-    </button>
-
-    <button id="pause-btn" aria-label="Pause video" title="Pause" style="display:none;">
-      <svg viewBox="0 0 24 24" >
-        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-      </svg>
-    </button>
-
-    <button id="volume-btn" aria-label="Mute/Unmute video" title="Mute/Unmute">
-      <svg id="volume-icon" viewBox="0 0 24 24">
-        <path d="M3 9v6h4l5 5V4L7 9H3z"/>
-      </svg>
-    </button>
+  <div class="scroll-container">
+    <img src="IMG/16.jpg" alt="">
+    <img src="IMG/17.jpg" alt="">
+    <img src="IMG/18.jpg" alt="">
+    <img src="IMG/19.jpg" alt="">
+    <img src="IMG/20.jpg" alt="">
+    <img src="IMG/21.jpg" alt="">
+    <img src="IMG/22.jpg" alt="">
+    <img src="IMG/23.png" alt="">
+    <img src="IMG/24.jpg" alt="">
+    <img src="IMG/25.jpg" alt="">
+    <img src="IMG/26.jpg" alt="">
+    <img src="IMG/29.jpg" alt="">
+    <img src="IMG/28.jpg" alt="">
+    <img src="IMG/2.jpeg" alt="">
+    <img src="IMG/3.jpeg" alt="">
+    <img src="IMG/4.jpeg" alt="">
+    <img src="IMG/15.jpg" alt="">
+    <img src="IMG/1.jpeg" alt="">
+    <img src="IMG/6.jpeg" alt="">
+    <img src="IMG/5.jpeg" alt="">
   </div>
 
-<nav>
-<a href="index.html">HOME</a>
-</nav>
-<script>
+<hr>
+
+<div class="video-controls centered">
+  <button id="play-btn" title="Play">
+    <svg viewBox="0 0 24 24">
+      <path d="M8 5v14l11-7z"/>
+    </svg>
+  </button>
+
+  <button id="pause-btn" title="Pause" style="display:none;">
+    <svg viewBox="0 0 24 24">
+      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+    </svg>
+  </button>
+
+  <button id="volume-btn" title="Mute/Unmute">
+    <svg id="volume-icon" viewBox="0 0 24 24">
+      <path d="M3 9v6h4l5 5V4L7 9H3z"/>
+    </svg>
+  </button>
+</div>
+
+
+  <footer>
+    <hr>
+    &copy; 2025 Geoprey T. Gapasin. All rights reserved.
+  </footer>
+
+  <script>
     const video = document.getElementById('background-video');
     const playBtn = document.getElementById('play-btn');
     const pauseBtn = document.getElementById('pause-btn');
@@ -215,8 +244,5 @@ nav {
       }
     });
   </script>
-  <footer><hr>
-    &copy; 2025 Geoprey T. Gapasin. All rights reserved.
-  </footer>
 </body>
 </html>
