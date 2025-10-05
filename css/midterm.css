@@ -1,4 +1,8 @@
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html, body {
   height: 100%;
@@ -169,15 +173,33 @@ footer {
   font-weight: 500;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
-
-@keyframes fadeSlideUp {
+@keyframes glowIn {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    text-shadow: none;
+    color: #fff;
+    transform: scale(0.9);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    color: #ffeb3b;
+    text-shadow: 0 0 20px #fff700, 0 0 40px #ffeb3b;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideGlow {
+  0% {
+    opacity: 0;
+    color: #fff;
+    transform: translateX(-40px);
+    text-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    color: #ffd966;
+    text-shadow: 0 0 10px #ffd700;
+    transform: translateX(0);
   }
 }
 
@@ -185,18 +207,15 @@ header h1 {
   font-size: 3.5rem;
   font-weight: 700;
   letter-spacing: 3px;
-  color: white;
-  animation: fadeSlideUp 1s ease forwards;
+  animation: glowIn 1.2s ease-out forwards;
+  opacity: 0;
 }
 
 header h3 {
-  font-weight: 400;
   font-size: 1.5rem;
-  color: #ffd966;
-  margin-top: 8px;
   font-style: italic;
-  animation: fadeSlideUp 1.2s ease forwards;
-  animation-delay: 0.3s;
-  opacity: 0; /* start hidden until animation */
+  margin-top: 8px;
+  animation: slideGlow 1.4s ease-out forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
 }
-
