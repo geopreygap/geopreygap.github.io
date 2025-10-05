@@ -5,190 +5,74 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <style>
-    html, body {
-  height: 100%;
-  margin: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* full viewport height */
-}
-
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: linear-gradient(135deg, #fceabb, #f8b500);
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      align-items: center;
-      padding: 40px 20px;
-      background-image: url('IMG/bg.jpg');
-      background-size: cover;
-      background-position: center;
-      background-blend-mode: multiply;
-      color: #fff;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-    }
-
-    header h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      letter-spacing: 3px;
-      color: white;
-    }
-
-    header h3 {
-      font-weight: 400;
-      font-size: 1.5rem;
-      color: #ffd966;
-      margin-top: 8px;
-      font-style: italic;
-    }
-
-    hr {
-      width: 60%;
-      border: 1px solid #fff4a3;
-      margin: 20px auto;
-      opacity: 0.6;
-    }
-
-    main {
-      max-width: 700px;
-      background: rgba(0, 0, 0, 0.45);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    }
-
-    main h4 {
-      text-align: center;
-      font-weight: 600;
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-      color: white;
-      letter-spacing: 1.2px;
-    }
-
-    main p {
-      text-align: justify;
-      line-height: 1.6;
-      font-size: 1.1rem;
-      color: white;
-      margin-bottom: 25px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.2rem;
-      margin: 0 15px;
-      padding: 8px 15px;
-      border-radius: 30px;
-      background: rgba(255, 255, 255, 0.15);
-      box-shadow: 0 0 8px #fffbe6;
-      transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
-      display: inline-block;
-    }
-
-    .personal-info p {
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: #fffacd;
-      margin-bottom: 8px;
-    }
-
-    nav {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #ffeb3b;
-      font-weight: 600;
-      font-size: 1.2rem;
-      margin: 0 15px;
-      padding: 8px 15px;
-      border-radius: 30px;
-      background: rgba(255, 255, 255, 0.15);
-      box-shadow: 0 0 8px #fffbe6;
-      transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
-      display: inline-block;
-    }
-
-    nav a:hover {
-      background: #ffeb3b;
-      color: #000;
-      transform: scale(1.1);
-      box-shadow: 0 0 20px #fff700;
-    }
-
-    footer {
-      margin-top: auto;
-      padding: 20px 0;
-      text-align: center;
-      color: #fff7a1;
-      font-style: italic;
-      font-weight: 500;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.5rem;
-      }
-
-      main {
-        padding: 20px;
-      }
-
-      nav a {
-        margin: 10px 8px;
-        font-size: 1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/midterm.css" />
 </head>
 <body>
+  
+  <nav class="navbar">
+    <a href="gapasin_resume.html">My Resume</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
   <header>
     <h1>WELCOME TO MY PAGE</h1>
     <h3>by: GEOPREY T. GAPASIN</h3>
   </header>
 
-  <main>
-  
-    <hr>
+ <main>
+  <hr />
+  <div class="summary-content active">
+    <h4>Welcome to my website! This is the homepage, feel free to check out my works.</h4>
+  </div>
+  <div class="summary-content">
+    <h4>Check out My Resume to learn about my education and experience.</h4>
+  </div>
+  <div class="summary-content">
+    <h4>Explore the Gallery for photos.</h4>
+  </div>
+   <div class="summary-content">
+    <h4>Want to know more? Why not click About Us.</h4>
+  </div>
+   <div class="summary-content">
+    <h4>I'd love to hear from you! You can reach me through the Contact Us.</h4>
+  </div>
+  <hr />
 
-    <h4>MY LINKS</h4>
- 
+  <div class="pagination-summary">
+    <button class="summary-btn" data-step="0">1</button>
+    <button class="summary-btn" data-step="1">2</button>
+    <button class="summary-btn" data-step="2">3</button>
+     <button class="summary-btn" data-step="3">4</button>
+      <button class="summary-btn" data-step="4">5</button>
+  </div>
+</main>
 
-    
 
+  <footer>
     <hr />
-
-     <nav class="nav-menu">
-      <a href="gapasin_resume.html">My Resume</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact Us</a>
-    </nav>
-  </main>
-
-  <footer><hr>
     &copy; 2025 Geoprey T. Gapasin. All rights reserved.
   </footer>
+<script>
+  const summaries = document.querySelectorAll('.summary-content');
+  const summaryButtons = document.querySelectorAll('.summary-btn');
+
+  summaryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const step = parseInt(button.dataset.step);
+
+      summaries.forEach(s => s.classList.remove('active'));
+      summaryButtons.forEach(btn => btn.classList.remove('active'));
+
+      summaries[step].classList.add('active');
+      button.classList.add('active');
+    });
+  });
+
+
+  summaryButtons[0].classList.add('active');
+</script>
+
 </body>
 </html>
