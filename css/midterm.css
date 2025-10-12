@@ -219,3 +219,113 @@ header h3 {
   animation-delay: 0.4s;
   opacity: 0;
 }
+
+
+@media (max-width: 600px) {
+  body {
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .navbar a {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  header h3 {
+    font-size: 1rem;
+  }
+
+  main {
+    width: 90%;
+    padding: 20px;
+  }
+
+  main h4 {
+    font-size: 1.3rem;
+  }
+
+  .summary-btn {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    margin: 5px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .navbar {
+    gap: 20px;
+  }
+
+  header h1 {
+    font-size: 2.8rem;
+  }
+
+  header h3 {
+    font-size: 1.2rem;
+  }
+
+  main {
+    width: 85%;
+  }
+}
+
+/* Base Navbar */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #ffeb3b;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .navbar a {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
