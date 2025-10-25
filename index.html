@@ -11,19 +11,26 @@
 </head>
 <body>
  <header class="header container">
-<div class="logo">
-  <img src="IMG/resume.jpg" alt="My Logo" class="mark-img">
-  <h1>My E-Portfolio</h1>
-</div>
+  <div class="logo">
+    <img src="IMG/resume.jpg" alt="My Logo" class="mark-img">
+    <h1>My E-Portfolio</h1>
+  </div>
 
+  <!-- Hamburger -->
+  <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
 
-  <nav class="nav">
+  <nav id="site-nav" class="nav" role="navigation">
     <a href="index.html" class="active">Home</a>
     <a href="gallery.html">Gallery</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-    <a href="RESUME.zip" download= "RESUME.zip" class="btn btn-primary"><span style="color:black;">Download Resume</span></a>
+    
+    <a href="RESUME.zip" download="RESUME.zip" class="btn btn-primary"><span style="color:black;">Download Resume</span></a>
   </nav>
 </header>
 
@@ -35,7 +42,7 @@
         <div>
           <h1>Hello, I'm <span style="color: var(--accent-1);">GEOPREY T. GAPASIN</span></h1>
           <p class="text-muted mb-2">A passionate <b>IT student</b> specializing in web development and design.</p>
-          <a href="RESUME.zip" download= "RESUME.zip" class="btn btn-primary">Download Resume</a>
+          <a href="RESUME.zip" download="RESUME.zip" class="btn btn-primary">Download Resume</a>
         </div>
         <img src="IMG/resume.jpg" alt="Profile photo" class="avatar">
       </div>
@@ -80,51 +87,52 @@
     <aside class="sidebar">
       <div class="card">
         <h2>Contact Info</h2>
-        <p>Email: <a href="mailto:gapasingeoprey@gmail.com">youremail@example.com</a></p>
-  <p>Facebook: <a href="https://facebook.com/Gapasin.G22" target="_blank">facebook.com/geopreygapasin</a></p>
-  <p>GitHub: <a href="https://github.com/geopreygap" target="_blank">github.com/geopreygapasin</a></p>
-</div>
-
+        <p>Email: <a href="mailto:gapasingeoprey@gmail.com">gapasingeoprey@gmail.com</a></p>
+        <p>Facebook: <a href="https://facebook.com/Gapasin.G22" target="_blank">facebook.com/geopreygapasin</a></p>
+        <p>GitHub: <a href="https://github.com/geopreygap" target="_blank">github.com/geopreygapasin</a></p>
       </div>
+
       <div class="card mt-2">
         <h2>Skills</h2>
-        
-  <p>
-    <span class="tag">Web Design</span>
-    <span class="tag">JavaScript</span>
-      <span class="tag">Python</span>
-  </p>
-  <p>
-    <span class="tag">Database</span>
-      <span class="tag">System Analysis</span>
-        <span class="tag">UI/UX</span>
-  </p>
-</div>
+        <p>
+          <span class="tag">Web Design</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Python</span>
+        </p>
+        <p>
+          <span class="tag">Database</span>
+          <span class="tag">System Analysis</span>
+          <span class="tag">UI/UX</span>
+        </p>
+      </div>
     </aside>
   </main>
 
   <!-- FOOTER  -->
-<footer class="footer">
-  <div class="footer-content">
-    <p>&copy; 2025 — All Rights Reserved.</p>
-    <div class="social-icons">
-<br>
-    <div class="footer-section quick-links">
-      <h4>🔗 Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-<br>
-      <div class="footer-social-icons">
-    <h4 class="_14">Follow or Message me on</h4>
-    <ul class="social-icons">
-        <li><a href="https://facebook.com/Gapasin.G22" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
-        <li><a href="https://github.com/geopreygap" class="social-icon"> <i class="fa fa-github"></i></a></li>
-         <li><a href="mailto:gapasingeoprey@gmail.com" class="social-icon"> <i class="fa fa-google"></i></a></li>
-<script src="js/main.js"></script>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 — All Rights Reserved.</p>
 
+      <div class="footer-section quick-links">
+        <h4>🔗 Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social-icons">
+        <h4 class="_14">Follow or Message me on</h4>
+        <ul class="social-icons">
+          <li><a href="https://facebook.com/Gapasin.G22" class="social-icon" target="_blank">Facebook</a></li>
+          <li><a href="https://github.com/geopreygap" class="social-icon" target="_blank">GitHub</a></li>
+          <li><a href="mailto:gapasingeoprey@gmail.com" class="social-icon">Email</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+<script src="js/main.js"></script>
 </body>
 </html>
