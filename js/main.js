@@ -47,3 +47,30 @@ window.addEventListener("load", () => {
     muteBtn.innerHTML = video.muted ? '<i class="fa fa-volume-mute"></i>' : '<i class="fa fa-volume-up"></i>';
   });
 });
+
+(function () {
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('site-nav');
+
+    toggle.addEventListener('click', function () {
+      const isOpen = nav.classList.toggle('open');
+      
+      this.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    
+    document.addEventListener('click', function(e){
+      if (!nav.contains(e.target) && !toggle.contains(e.target) && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900 && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
