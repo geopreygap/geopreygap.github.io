@@ -8,88 +8,96 @@
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
- <header class="header container">
-<div class="logo">
-  <img src="IMG/resume.jpg" alt="My Logo" class="mark-img">
-  <h1>My E-Portfolio</h1>
-</div>
+  <header class="header container">
+    <div class="logo">
+      <img src="IMG/resume.jpg" alt="My Logo" class="mark-img">
+      <h1>My E-Portfolio</h1>
+    </div>
 
+    <!-- Hamburger Button -->
+    <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
 
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="portfolio.html" class="active">Portfolio</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-   <a href="RESUME.zip" download= "RESUME.zip" class="btn btn-primary"><span style="color:black;">Download Resume</span></a>
-  </nav>
-</header>
+    <!-- Navigation -->
+    <nav id="site-nav" class="nav" role="navigation">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="RESUME.zip" download class="btn btn-primary">
+        <span style="color:black;">Download Resume</span>
+      </a>
+    </nav>
+  </header>
 
-<section id="projects" class="card">
-  <h2>Projects</h2>
-  <p class="text-muted mb-2">Here are some of the applications and systems I’ve developed, complete with screenshots, descriptions, and source links.</p>
+  <section id="projects" class="card">
+    <h2>Projects</h2>
+    <p class="text-muted mb-2">Here are some of the applications and systems I’ve developed, complete with screenshots, descriptions, and source links.</p>
 
-  <div class="project-grid">
-    
-    <!-- PROJECT 1 -->
-    <div class="project-item">
-      <img src="IMG/proj.png" alt="HopOn Ride-Hailing App Screenshot" style="border-radius:5px; margin-bottom:.75rem;">
-      <img src="IMG/proj1.png" alt="HopOn Ride-Hailing App Screenshot" style="border-radius:5px; margin-bottom:.75rem;">
-      
-      <h3>HopOn Ride-Hailing Platform</h3>
-      <p>A web-based system that allows users to book rides, operators to manage vehicles, and admins to oversee operations — built with PHP and MySQL.</p>
-      <div class="mb-1">
-        <span class="tag">PHP</span>
-        <span class="tag">MySQL</span>
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
+    <div class="project-grid">
+      <!-- PROJECT 1 -->
+      <div class="project-item">
+        <img src="IMG/proj.png" alt="HopOn Ride-Hailing App Screenshot" style="border-radius:5px; margin-bottom:.75rem;">
+        <img src="IMG/proj1.png" alt="HopOn Ride-Hailing App Screenshot" style="border-radius:5px; margin-bottom:.75rem;">
+        <h3>HopOn Ride-Hailing Platform</h3>
+        <p>A web-based system that allows users to book rides, operators to manage vehicles, and admins to oversee operations — built with PHP and MySQL.</p>
+        <div class="mb-1">
+          <span class="tag">PHP</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+        </div>
+        <a href="https://github.com/geopreygap/GeopreyGapasin.github.io" target="_blank" class="btn btn-primary">View on GitHub</a>
       </div>
-      <a href="https://github.com/geopreygap/GeopreyGapasin.github.io" target="_blank" class="btn btn-primary">View on GitHub</a>
-    </div>
 
-    <!-- PROJECT 2 -->
-    <div class="project-item">
-       <img src="IMG/proj3.png" alt="HopOn Ride-Hailing App Screenshot" style="border-radius:5px; margin-bottom:.75rem;">
-      <img src="IMG/proj4.png" alt="HopOn Ride-Hailing App Screenshot" style="border-radius:5px; margin-bottom:.75rem;">
-       <h3>Sample Website</h3>
-      <p>This website — built with a minimalist dark theme — serves as my personal digital portfolio showcasing my IT projects.</p>
-      <div class="mb-1">
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">UI Design</span>
+      <!-- PROJECT 2 -->
+      <div class="project-item">
+        <img src="IMG/proj3.png" alt="Sample Website Screenshot" style="border-radius:5px; margin-bottom:.75rem;">
+        <img src="IMG/proj4.png" alt="Sample Website Screenshot" style="border-radius:5px; margin-bottom:.75rem;">
+        <h3>Sample Website</h3>
+        <p>This website — built with a minimalist dark theme — serves as my personal digital portfolio showcasing my IT projects.</p>
+        <div class="mb-1">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">UI Design</span>
+        </div>
+        <a href="https://github.com/geopreygap/geopreygap.github.io" target="_blank" class="btn btn-primary">View on GitHub</a>
       </div>
-      <a href="https://github.com/geopreygap/geopreygap.github.io" target="_blank" class="btn btn-primary">View on GitHub</a>
     </div>
+  </section>
 
-  <!-- FOOTER  -->
-<footer class="footer">
-  <div class="footer-content">
-    <p>&copy; 2025 — All Rights Reserved.</p>
-    <div class="social-icons">
-<br>
-    <div class="footer-section quick-links">
-      <h4>🔗 Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-<br>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 — All Rights Reserved.</p>
+      <div class="footer-section quick-links">
+        <h4>🔗 Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
       <div class="footer-social-icons">
-    <h4 class="_14">Follow or Message me on</h4>
-    <ul class="social-icons">
-        <li><a href="https://facebook.com/Gapasin.G22" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
-        <li><a href="https://github.com/geopreygap" class="social-icon"> <i class="fa fa-github"></i></a></li>
-         <li><a href="mailto:gapasingeoprey@gmail.com" class="social-icon"> <i class="fa fa-google"></i></a></li>
+        <h4 class="_14">Follow or Message me on</h4>
+        <ul class="social-icons">
+          <li><a href="https://facebook.com/Gapasin.G22" class="social-icon"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://github.com/geopreygap" class="social-icon"><i class="fa fa-github"></i></a></li>
+          <li><a href="mailto:gapasingeoprey@gmail.com" class="social-icon"><i class="fa fa-google"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
-  <!-- JS -->
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
-
-
-
