@@ -20,21 +20,24 @@
       <button id="mute-btn"><i class="fa fa-volume-mute"></i></button>
     </div>
   </div>
+ <!-- Hamburger -->
+  <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
 
-  <header class="header container">
-    <div class="logo">
-      <img src="IMG/resume.jpg" alt="My Logo" class="mark-img">
-      <h1>My E-Portfolio</h1>
-    </div>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="gallery.html" class="active">Gallery</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="RESUME.zip" download="RESUME.zip" class="btn btn-primary"><span style="color:black;">Download Resume</span></a>
-    </nav>
-  </header>
+  <nav id="site-nav" class="nav" role="navigation">
+    <a href="index.html" class="active">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    
+    <a href="RESUME.zip" download="RESUME.zip" class="btn btn-primary"><span style="color:black;">Download Resume</span></a>
+  </nav>
+</header>
+
 
   <div class="album-tabs">
     <button class="tab active" data-target="personal">Personal Album</button>
@@ -110,4 +113,5 @@
 <script src="js/main.js"></script>
 </body>
 </html>
+
 
