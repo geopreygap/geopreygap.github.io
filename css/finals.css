@@ -657,3 +657,71 @@ body::before {
   display: block;
   margin: 0 auto;
 }
+
+/* --- Menu toggle (hamburger) --- */
+.menu-toggle {
+  display: none;               /* hidden by default on desktop */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: 8px;
+}
+
+.menu-toggle .hamburger-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+/* NAV - default desktop */
+.nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Mobile behavior */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block; /* show hamburger */
+  }
+
+  /* hide nav links by default on small screens */
+  .nav {
+    position: absolute;
+    top: 72px; /* adjust if header height different */
+    right: 1rem;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border: 1px solid rgba(255,255,255,0.03);
+    padding: 1rem;
+    border-radius: 12px;
+    flex-direction: column;
+    gap: 0.5rem;
+    display: none;      /* hidden */
+    min-width: 200px;
+    z-index: 2000;
+  }
+
+  /* when .open (toggled), show nav */
+  .nav.open {
+    display: flex;
+  }
+
+  /* Make sure nav links are stacked and touch-friendly */
+  .nav a {
+    display: block;
+    padding: 0.6rem 0.8rem;
+    width: 100%;
+  }
+
+  /* main layout becomes a single column (you already have this) */
+  .main {
+    grid-template-columns: 1fr;
+    padding-bottom: 2rem;
+  }
+}
