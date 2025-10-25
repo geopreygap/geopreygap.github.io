@@ -18,13 +18,21 @@
 </div>
 
 
-  <nav class="nav">
-    <a href="index.html">Home</a>
+  <!-- Hamburger -->
+  <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+
+  <nav id="site-nav" class="nav" role="navigation">
+    <a href="index.html" class="active">Home</a>
     <a href="gallery.html">Gallery</a>
     <a href="portfolio.html">Portfolio</a>
-    <a href="about.html" class="active">About</a>
+    <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-    <a href="RESUME.zip" download= "RESUME.zip" class="btn btn-primary"><span style="color:black;">Download Resume</span></a>
+    
+    <a href="RESUME.zip" download="RESUME.zip" class="btn btn-primary"><span style="color:black;">Download Resume</span></a>
   </nav>
 </header>
   <main class="container main">
@@ -65,3 +73,4 @@
 <script src="js/main.js"></script>
 </body>
 </html>
+
