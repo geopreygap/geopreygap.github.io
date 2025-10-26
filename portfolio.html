@@ -4,77 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My E-Portfolio</title>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/finals.css" />
   <link rel="stylesheet" href="css/footer.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">  <section id="projects" class="card">
-    <h2>Projects</h2>
-    <p class="text-muted mb-2">Here are some of the applications and systems I’ve developed, complete with screenshots, descriptions, and source links.</p>
-
-     <section id="projects" class="card">
-    <h2>Projects</h2>
-    <p class="text-muted mb-2">Here are some of the applications and systems I’ve developed, complete with screenshots, descriptions, and source links.</p>
-
-    <div class="project-grid">
-      <!-- PROJECT 1 -->
-      <div class="project-item">
-        <img src="IMG/proj.png" alt="HopOn Ride-Hailing App Screenshot" style="border-radius:5px; margin-bottom:.75rem;">
-        <img src="IMG/proj1.png" alt="HopOn Ride-Hailing App Screenshot" style="border-radius:5px; margin-bottom:.75rem;">
-        <h3>HopOn Ride-Hailing Platform</h3>
-        <p>A web-based system that allows users to book rides, operators to manage vehicles, and admins to oversee operations — built with PHP and MySQL.</p>
-        <div class="mb-1">
-          <span class="tag">PHP</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-        </div>
-        <a href="https://github.com/geopreygap/GeopreyGapasin.github.io" target="_blank" class="btn btn-primary">View on GitHub</a>
-      </div>
-
-      <!-- PROJECT 2 -->
-      <div class="project-item">
-        <img src="IMG/proj3.png" alt="Sample Website Screenshot" style="border-radius:5px; margin-bottom:.75rem;">
-        <img src="IMG/proj4.png" alt="Sample Website Screenshot" style="border-radius:5px; margin-bottom:.75rem;">
-        <h3>Sample Website</h3>
-        <p>This website — built with a minimalist dark theme — serves as my personal digital portfolio showcasing my IT projects.</p>
-        <div class="mb-1">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">UI Design</span>
-        </div>
-        <a href="https://github.com/geopreygap/geopreygap.github.io" target="_blank" class="btn btn-primary">View on GitHub</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 📄 RESUME SECTION -->
-  <section id="resume" class="card" style="margin-top: 2rem;">
-    <h2>My Resume</h2>
-    <p class="text-muted mb-2">Here’s a preview of my professional resume. You can also download it directly below.</p>
-
-    <div style="text-align:center; margin-bottom: 1.5rem;">
-      <a href="RESUME.pdf" download class="btn btn-primary" style="margin-bottom: 1rem;">
-        <i class="fa fa-download"></i> Download Resume
-      </a>
-    </div>
-
-    <!-- Resume Viewer -->
-    <div style="width:100%; height:600px; border:2px solid #222; border-radius:8px; overflow:hidden;">
-      <iframe src="RESUME.pdf" width="100%" height="100%" style="border:none;"></iframe>
-    </div>
-  </section>
-
-
-    <!-- Resume Viewer -->
-    <div style="width:100%; height:600px; border:2px solid #222; border-radius:8px; overflow:hidden;">
-      <iframe src="RESUME.pdf" width="100%" height="100%" style="border:none;"></iframe>
-    </div>
-  </section>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
+  <!-- HEADER -->
   <header class="header container">
     <div class="logo">
       <img src="IMG/resume.jpg" alt="My Logo" class="mark-img">
@@ -101,9 +41,12 @@
     </nav>
   </header>
 
+  <!-- PROJECTS SECTION -->
   <section id="projects" class="card">
     <h2>Projects</h2>
-    <p class="text-muted mb-2">Here are some of the applications and systems I’ve developed, complete with screenshots, descriptions, and source links.</p>
+    <p class="text-muted mb-2">
+      Here are some of the applications and systems I’ve developed, complete with screenshots, descriptions, and source links.
+    </p>
 
     <div class="project-grid">
       <!-- PROJECT 1 -->
@@ -111,7 +54,9 @@
         <img src="IMG/proj.png" alt="HopOn Ride-Hailing App Screenshot" style="border-radius:5px; margin-bottom:.75rem;">
         <img src="IMG/proj1.png" alt="HopOn Ride-Hailing App Screenshot" style="border-radius:5px; margin-bottom:.75rem;">
         <h3>HopOn Ride-Hailing Platform</h3>
-        <p>A web-based system that allows users to book rides, operators to manage vehicles, and admins to oversee operations — built with PHP and MySQL.</p>
+        <p>
+          A web-based system that allows users to book rides, operators to manage vehicles, and admins to oversee operations — built with PHP and MySQL.
+        </p>
         <div class="mb-1">
           <span class="tag">PHP</span>
           <span class="tag">MySQL</span>
@@ -126,7 +71,9 @@
         <img src="IMG/proj3.png" alt="Sample Website Screenshot" style="border-radius:5px; margin-bottom:.75rem;">
         <img src="IMG/proj4.png" alt="Sample Website Screenshot" style="border-radius:5px; margin-bottom:.75rem;">
         <h3>Sample Website</h3>
-        <p>This website — built with a minimalist dark theme — serves as my personal digital portfolio showcasing my IT projects.</p>
+        <p>
+          This website — built with a minimalist dark theme — serves as my personal digital portfolio showcasing my IT projects.
+        </p>
         <div class="mb-1">
           <span class="tag">HTML</span>
           <span class="tag">CSS</span>
@@ -137,10 +84,30 @@
     </div>
   </section>
 
+  <!-- 📄 RESUME SECTION -->
+  <section id="resume" class="card" style="margin-top: 2rem;">
+    <h2>My Resume</h2>
+    <p class="text-muted mb-2">
+      Here’s a preview of my professional resume. You can also download it directly below.
+    </p>
+
+    <div style="text-align:center; margin-bottom: 1.5rem;">
+      <a href="RESUME.pdf" download class="btn btn-primary" style="margin-bottom: 1rem;">
+        <i class="fa fa-download"></i> Download Resume
+      </a>
+    </div>
+
+    <!-- Resume Viewer -->
+    <div style="width:100%; height:600px; border:2px solid #222; border-radius:8px; overflow:hidden;">
+      <iframe src="RESUME.pdf" width="100%" height="100%" style="border:none;"></iframe>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-content">
       <p>&copy; 2025 — All Rights Reserved.</p>
+
       <div class="footer-section quick-links">
         <h4>🔗 Quick Links</h4>
         <ul>
@@ -161,10 +128,7 @@
     </div>
   </footer>
 
+  <!-- JS -->
   <script src="js/main.js"></script>
 </body>
 </html>
-
-
-
-
