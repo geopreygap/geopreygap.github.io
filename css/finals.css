@@ -684,41 +684,68 @@ body::before {
 @media (max-width: 900px) {
   .menu-toggle {
     display: block;
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   }
 
- 
+  .menu-toggle .hamburger-line {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #071021;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: transform 180ms ease, opacity 180ms ease;
+  }
+
   .nav {
     position: absolute;
-    top: 72px; 
+    top: 72px;
     right: 1rem;
-    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    border: 1px solid rgba(255,255,255,0.03);
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.1);
     padding: 1rem;
     border-radius: 12px;
     flex-direction: column;
     gap: 0.5rem;
-    display: none;      
+    display: none;
     min-width: 200px;
     z-index: 2000;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   }
-
 
   .nav.open {
     display: flex;
   }
 
-
   .nav a {
     display: block;
-    padding: 0.6rem 0.8rem;
     width: 100%;
+    padding: 0.6rem 0.8rem;
+    color: #071021;
+    font-weight: var(--fw-medium);
+    border-radius: 8px;
+    transition: all 0.25s ease;
   }
 
-  
+  .nav a:hover,
+  .nav a.active {
+    color: #ffffff;
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-3));
+    box-shadow: 0 4px 12px rgba(155,140,255,0.2);
+  }
+
   .main {
     grid-template-columns: 1fr;
     padding-bottom: 2rem;
   }
 }
+
+
 
 
