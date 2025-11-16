@@ -641,28 +641,27 @@ body::before {
   background: rgba(0, 0, 0, 0.3);
   z-index: -1;
 }
-
-/* === IMAGE SIZE FIX === */
 .avatar,
 .mark-img {
-  width: 80px;       /* adjust as needed */
-  height: auto;       /* keeps aspect ratio */
-  border-radius: 10px; /* optional — makes corners rounded */
-  object-fit: cover;  /* makes sure it scales nicely */
+  width: 80px;       
+  height: auto;       
+  border-radius: 10px; 
+  object-fit: cover; 
 }
 
-/* optional: center the image in the hero section */
+
 .hero img.avatar {
   max-width: 100%;
   display: block;
   margin: 0 auto;
 }
 
-/* --- Menu toggle (hamburger) --- */
+
 .menu-toggle {
-  display: none;               /* hidden by default on desktop */
-  background: transparent;
-  border: none;
+  display: none;               
+  background: var(--panel);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;  
   cursor: pointer;
   padding: 8px;
   margin-left: 8px;
@@ -678,23 +677,23 @@ body::before {
   transition: transform 180ms ease, opacity 180ms ease;
 }
 
-/* NAV - default desktop */
+
 .nav {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
-/* Mobile behavior */
+
 @media (max-width: 900px) {
   .menu-toggle {
-    display: block; /* show hamburger */
+    display: block;
   }
 
-  /* hide nav links by default on small screens */
+ 
   .nav {
     position: absolute;
-    top: 72px; /* adjust if header height different */
+    top: 72px; 
     right: 1rem;
     background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
     border: 1px solid rgba(255,255,255,0.03);
@@ -702,26 +701,27 @@ body::before {
     border-radius: 12px;
     flex-direction: column;
     gap: 0.5rem;
-    display: none;      /* hidden */
+    display: none;      
     min-width: 200px;
     z-index: 2000;
   }
 
-  /* when .open (toggled), show nav */
+
   .nav.open {
     display: flex;
   }
 
-  /* Make sure nav links are stacked and touch-friendly */
+
   .nav a {
     display: block;
     padding: 0.6rem 0.8rem;
     width: 100%;
   }
 
-  /* main layout becomes a single column (you already have this) */
+  
   .main {
     grid-template-columns: 1fr;
     padding-bottom: 2rem;
   }
 }
+
