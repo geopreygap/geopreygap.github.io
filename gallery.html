@@ -4,51 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My E-Portfolio</title>
+
   <link rel="stylesheet" href="css/finals.css" />
   <link rel="stylesheet" href="css/footer.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
+
+  <!-- VIDEO BACKGROUND -->
   <div class="video-container">
     <video autoplay muted loop id="bg-video">
       <source src="VIDEO/30.mp4" type="video/mp4">
     </video>
+
     <div class="video-controls">
-      <button id="play-btn"><i class="fa fa-pause"></i></button>
-      <button id="mute-btn"><i class="fa fa-volume-mute"></i></button>
+      <button id="play-btn"><i class="fa-solid fa-pause"></i></button>
+      <button id="mute-btn"><i class="fa-solid fa-volume-xmark"></i></button>
     </div>
   </div>
-   <header class="header container">
+
+  <!-- HEADER -->
+  <header class="header container">
+
     <div class="logo">
       <img src="IMG/resume.jpg" alt="My Logo" class="mark-img">
       <h1>My E-Portfolio</h1>
     </div>
+
     <!-- Hamburger -->
-  <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
-    <span class="hamburger-line"></span>
-    <span class="hamburger-line"></span>
-    <span class="hamburger-line"></span>
-  </button>
+    <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
 
-  <nav id="site-nav" class="nav" role="navigation">
-    <a href="index.html">Home</a>
-    <a href="gallery.html" class="active">Gallery</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    
-    <a href="RESUME.zip" download="RESUME.zip" class="btn btn-primary"><span style="color:black;">Download Resume</span></a>
-  </nav>
-</header>
+    <nav id="site-nav" class="nav">
+      <a href="index.html">Home</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="RESUME.zip" download="RESUME.zip" class="btn btn-primary">Download Resume</a>
+    </nav>
+
+  </header>
 
 
+  <!-- ALBUM TABS -->
   <div class="album-tabs">
     <button class="tab active" data-target="personal">Personal Album</button>
     <button class="tab" data-target="projects">Projects Album</button>
   </div>
 
+  <!-- PERSONAL ALBUM -->
   <div class="album active" id="personal">
     <div class="scroll-container">
       <img src="IMG/16.jpg">
@@ -73,6 +87,7 @@
     </div>
   </div>
 
+  <!-- PROJECTS ALBUM -->
   <div class="album" id="projects">
     <div class="scroll-container">
       <img src="IMG/proj.png">
@@ -86,61 +101,47 @@
     </div>
   </div>
 
+  <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox">
     <span class="close" id="closeLightbox">&times;</span>
     <img class="lightbox-content" id="lightboxImage" src="">
   </div>
 
-  <!-- FOOTER  -->
-<footer class="footer">
-  <div class="footer-content">
 
-    <p>&copy; 2025 — All Rights Reserved.</p>
+  <!-- FOOTER -->
+  <footer class="footer">
 
-    <!-- Quick Links -->
-    <div class="footer-section quick-links">
-      <h4>🔗 Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <div class="footer-content">
+
+      <p>&copy; 2025 — All Rights Reserved.</p>
+
+      <!-- Quick Links -->
+      <div class="footer-section quick-links">
+        <h4>🔗 Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="footer-section footer-social-icons">
+        <h4>Follow or Message me on</h4>
+        <ul class="social-icons">
+          <li><a href="https://facebook.com/Gapasin.G22"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="https://github.com/geopreygap"><i class="fa-brands fa-github"></i></a></li>
+          <li><a href="mailto:gapasingeoprey@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+        </ul>
+      </div>
+
     </div>
 
-    <!-- Social Icons -->
-    <div class="footer-section footer-social-icons">
-      <h4>Follow or Message me on</h4>
-      <ul class="social-icons">
-        <li>
-          <a href="https://facebook.com/Gapasin.G22" class="social-icon">
-            <i class="fa fa-facebook"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/geopreygap" class="social-icon">
-            <i class="fa fa-github"></i>
-          </a>
-        </li>
-        <li>
-          <a href="mailto:gapasingeoprey@gmail.com" class="social-icon">
-            <i class="fa fa-google"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
+  </footer>
 
-  </div>
-</footer>
 
-<!-- JS -->
-<script src="js/main.js"></script>
+  <!-- JS -->
+  <script src="js/main.js"></script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
