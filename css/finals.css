@@ -488,8 +488,6 @@ img {
     transform: scale(1);
   }
 }
-
-/* Optional gallery grid tweaks */
 .gallery-grid img {
   width: 100%;
   border-radius: 10px;
@@ -502,7 +500,6 @@ img {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* ===== Gallery Styles ===== */
 .scroll-container {
   display: flex;
   overflow-x: auto;
@@ -656,27 +653,26 @@ body::before {
   margin: 0 auto;
 }
 
-
 .menu-toggle {
   display: none;               
-  background: var(--panel);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.9); 
+  border: 1px solid rgba(0,0,0,0.1);   
   border-radius: 8px;  
   cursor: pointer;
   padding: 8px;
   margin-left: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); 
 }
 
 .menu-toggle .hamburger-line {
   display: block;
   width: 22px;
   height: 2px;
-  background: var(--text);
+  background: #071021; 
   margin: 4px 0;
   border-radius: 2px;
   transition: transform 180ms ease, opacity 180ms ease;
 }
-
 
 .nav {
   display: flex;
@@ -724,4 +720,5 @@ body::before {
     padding-bottom: 2rem;
   }
 }
+
 
