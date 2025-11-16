@@ -653,7 +653,9 @@ body::before {
   margin: 0 auto;
 }
 
-.menu-toggle {
+
+@media (max-width: 900px) {
+  .menu-toggle {
   display: none;               
   background: rgba(255, 255, 255, 0.9); 
   border: 1px solid rgba(0,0,0,0.1);   
@@ -675,35 +677,9 @@ body::before {
 }
 
 .nav {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-
-@media (max-width: 900px) {
-  .menu-toggle {
-    display: block;
-    background: #ffffff;
-    border: 1px solid rgba(0,0,0,0.1);
-    border-radius: 8px;
-    cursor: pointer;
-    padding: 8px;
-    margin-left: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  }
-
-  .menu-toggle .hamburger-line {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: #071021;
-    margin: 4px 0;
-    border-radius: 2px;
-    transition: transform 180ms ease, opacity 180ms ease;
-  }
-
-  .nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
     position: absolute;
     top: 72px;
     right: 1rem;
@@ -712,8 +688,6 @@ body::before {
     padding: 1rem;
     border-radius: 12px;
     flex-direction: column;
-    gap: 0.5rem;
-    display: none;
     min-width: 200px;
     z-index: 2000;
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
@@ -745,6 +719,7 @@ body::before {
     padding-bottom: 2rem;
   }
 }
+
 
 
 
